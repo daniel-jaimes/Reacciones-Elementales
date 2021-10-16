@@ -38,16 +38,4 @@ public class benchmarkCharacters {
     public String toString() {
         return "";
     }
-    //GETTERS
-    private String[][] getElementsAndValues() {
-        return this.charactersByElements;
-    }
-
-    private int getTotalCharacters() {
-        return this.totalCharacters;
-    }
-
-    private int getTotalElementsUsed() {
-        return this.totalElementsUsed;
-    }
 }

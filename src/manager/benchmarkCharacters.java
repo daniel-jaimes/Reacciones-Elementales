@@ -17,7 +17,7 @@ public class benchmarkCharacters {
         characters.forEach(character -> {
             elements.add(String.valueOf(character.getType()));
         });
-        //Filtramos los que se repiten
+        //Filtramos los elementos que se repiten
         elementsUsed = (ArrayList<String>) elements
                 .stream()
                 .distinct().collect(Collectors.toList());

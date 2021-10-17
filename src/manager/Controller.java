@@ -5,7 +5,7 @@ import dao.ResultsReader;
 import dao.ResultsWriter;
 import model.Character;
 
-import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Controller {
     public void init() {
         writeResults(readCharacters());
-        //printStatisticsTerminal();
+        printStatisticsTerminal();
     }
 
     private void writeResults(ArrayList<Character> characters) {
@@ -33,7 +33,15 @@ public class Controller {
     }
 
     private void printStatisticsTerminal() {
-        FileReader RR = new ResultsReader().getResults();
+        System.out.println("IMPRIMIENDO RESULTADOS...");
+        try (BufferedReader BR_RR = new BufferedReader(new ResultsReader().getResults())){
+            String thisLine;
+            while ((thisLine = BR_RR.readLine()) != null) {
+                System.out.println(thisLine);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

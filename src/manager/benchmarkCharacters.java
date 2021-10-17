@@ -36,6 +36,12 @@ public class benchmarkCharacters {
     }
     @Override
     public String toString() {
-        return "";
+        String str = "Total de personajes: " + this.totalCharacters +
+                "\nTotal de elementos utilizados: " + this.totalElementsUsed +
+                "\nTotal de personajes por elemento:";
+        for (int i = 0; i < this.charactersByElements.length; i++) {
+            str += "\n\t- " + this.charactersByElements[0][i] + " : " + this.charactersByElements[1][i];
+        }
+        return str;
     }
 }

@@ -25,7 +25,6 @@ public class ElementsController {
                 } while (content != -1 && combination.equals(""));
             } while (content != -1);
             ER.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

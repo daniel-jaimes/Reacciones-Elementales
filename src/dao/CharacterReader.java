@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class CharacterReader {
     public ArrayList<Character> getCharacters() {
         BufferedReader CR;
-        ArrayList<Character> characters = new ArrayList<>();;
+        ArrayList<Character> characters = new ArrayList<>();
         System.out.println("LEIENDO PERSONAJES...");
         CR = new BufferedReader(new dao.Reader().readerPath("files/personajes.txt"));
         String line = null;
